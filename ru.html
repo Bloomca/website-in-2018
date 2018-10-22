@@ -48,7 +48,9 @@
   </div>
   <div id="cookies" style="display: none;">
     <div class="cookies">
-      Наш сайт использует куки
+      <h2>
+        Ваша конфиденциальность
+      </h2>
       <p>
         Мы используем куки для того, чтобы предоставить лучший сервис на нашем сайте и показа более релевантных сообщений рекламного характера.
         Если вы хотите узнать больше, пожалуйста, ознакомьтесь с нашей <a href="#">политикой конфиденциальности</a> и <a href="#">условиями использования cookies</a>.
@@ -59,13 +61,21 @@
     </div>
   </div>
   <div id="age-verification" style="display: none;">
-    Вам уже есть 18 лет?
-    <button id="yes-age-verification-btn">
-      да
-    </button>
-    <button id="no-age-verification-btn">
-      нет
-    </button>
+    <div class="choice-container">
+      <div class="choice">
+          <h2>
+            Вам уже есть 18 лет?
+          </h2>
+          <div>
+            <button id="yes-age-verification-btn" class="choice-btn">
+              да
+            </button>
+            <button id="no-age-verification-btn" class="choice-btn">
+              нет
+            </button>
+          </div>
+        </div>
+    </div>
     <div style="display: none">
       <input placeholder="день" />
       <input placeholder="месяц" />
@@ -82,13 +92,21 @@
     </p>
   </div>
   <div id="default-city" style="display: none;">
-    Ваш город Москва?
-    <button id="yes-default-city-btn">
-      да
-    </button>
-    <button id="no-default-city-btn">
-      нет
-    </button>
+      <div class="choice-container">
+          <div class="choice">
+            <h2>
+              Ваш город Москва?
+            </h2>
+            <div>
+              <button id="yes-default-city-btn" class="choice-btn">
+                да
+              </button>
+              <button id="no-default-city-btn" class="choice-btn">
+                нет
+              </button>
+            </div>
+          </div>
+        </div>
   </div>
   <div id="subscribe" style="display: none;">
     <div id="close-subscribe-btn">x</div>

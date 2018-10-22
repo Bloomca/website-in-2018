@@ -1,6 +1,7 @@
 body {
   background-color: #001f3f;
   color: #fff;
+  padding-top: 100px;
 }
 
 h1 {
@@ -56,4 +57,22 @@ h1 {
   color: #fff;
   padding: 15px 20px;
   font-size: 125%;
+}
+
+.choice-container {
+  text-align: center;
+}
+
+.choice {
+  background-color: #0074D9;
+  border-radius: 15px;
+  padding: 20px 30px;
+  display: inline-block;
+}
+
+.choice-btn {
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-size: 110%;
+  cursor: pointer;
 }
