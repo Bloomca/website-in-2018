@@ -10,6 +10,7 @@
     defaultCity: 'default-city',
     subscribe: 'subscribe',
     adblock: 'adblock',
+    donate: 'donate',
     consultant: 'consultant',
     searchResults: 'search-results',
     wrong: 'wrong'
@@ -68,6 +69,11 @@
 
   onClick('adblock-btn', function () {
     hideScreen(screens.adblock);
+    showScreen(screens.donate);
+  });
+
+  onClick('donate-btn', function () {
+    hideScreen(screens.donate);
     showScreen(screens.consultant);
   });
 
