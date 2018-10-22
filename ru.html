@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css" />
+  <title>Сайты в 2018</title>
+</head>
+<body>
+  <div id="start-app">
+    <h1>
+      Сайты в 2018 году
+    </h1>
+    <button id="start-btn" class="btn">
+      Начать
+    </button>
+  </div>
+  <div id="notification" style="display: none">
+    <div class="notification">
+      <p class="notification-text">
+        Хотите получать уведомления?
+      </p>
+      <div class="notification-choices">
+        <button id="no-notifications-btn">
+          нет
+        </button>
+        <button id="yes-notifications-btn">
+          да
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="start-page" style="display: none;">
+    <div class="notification" style="right: 100px; left: auto;">
+        <p class="notification-text">
+          Сделать стартовой страницей?
+        </p>
+        <div class="notification-choices">
+          <button id="no-start-page-btn">
+            нет
+          </button>
+          <button id="yes-start-page-btn">
+            да
+          </button>
+        </div>
+    </div>
+  </div>
+  <div id="cookies" style="display: none;">
+    <div class="cookies">
+      Наш сайт использует куки
+      <p>
+        Наш сайт использует куки для персонализации данных и показа более релевантных сообщений рекламного характера
+      </p>
+      <button id="cookies-btn" class="btn">
+        Принять
+      </button>
+    </div>
+  </div>
+  <div id="age-verification" style="display: none;">
+    Вам уже есть 18 лет?
+    <button id="yes-age-verification-btn">
+      да
+    </button>
+    <button id="no-age-verification-btn">
+      нет
+    </button>
+    <div style="display: none">
+      <input placeholder="день" />
+      <input placeholder="месяц" />
+      <input placeholder="год" />
+      <button>
+        Отправить
+      </button>
+    </div>
+  </div>
+  <div id="restrict-age" style="display: none">
+    <h1>Вы не можете посещать этот сайт</h1>
+    <p>
+      В соответствии с законодательством РФ и Гаагской конвенцией, мы не можем показывать содержимое этого сайта пользователям, не достигшим 18 лет.
+    </p>
+  </div>
+  <div id="default-city" style="display: none;">
+    Ваш город Москва?
+    <button id="yes-default-city-btn">
+      да
+    </button>
+    <button id="no-default-city-btn">
+      нет
+    </button>
+  </div>
+  <div id="subscribe" style="display: none;">
+    <div id="close-subscribe-btn">x</div>
+    <h3>
+      Подпишитесь на нашу рассылку
+    </h3>
+    <p>
+      Хотите первым получать свежие новости? Мы будем рассылать вам интересные предложения каждую неделю, без ненужного спама, и никогда не отдадим ваш электронный адрес в третьи руки.
+    </p>
+    <input placeholder="ваша электронная почта" />
+    <button id="yes-subscribe-btn">
+      Подписаться
+    </button>
+  </div>
+  <div id="adblock" style="display: none;">
+    <h2>
+      Пожалуйста, отключите блокировщик рекламы
+    </h2>
+    <p>
+      Реклама – наш главный источник доходов. Мы всегда стараемся сделать самое лучшее, чтобы вы могли бесплатно пользоваться нашим сервисом, поэтому было бы замечательно, если вы внесёте наш сайт в список исключений для вашего блокировщика рекламы.
+    </p>
+    <p>
+      Мы тоже не любим рекламу, но наша миссия – дать услугу самому большому числу пользователей, поэтому мы всегда будем бесплатны. К сожалению, без рекламы это невозможно.
+    </p>
+    <button id="adblock-btn">
+      Хорошо
+    </button>
+  </div>
+  <div id="consultant" style="display: none;">
+    Ирина, консультант
+    <div>
+      Здравствуйте, чем могу помочь?
+      <div id="close-consultant-btn">x</div>
+      <input />
+      <button id="send-consultant-btn">
+        Отправить
+      </button>
+    </div>
+  </div>
+  <div id="search-results" style="display: none;">
+    <h2>
+      Нашли, что искали?
+    </h2>
+    <p>
+      Мы пытаемся помочь всем, и собираем статистику, насколько полезным оказался наш сайт. Пожалуйста, ответьте нам, чтобы мы могли улучшить наш сервис в дальнейшем. Спасибо!
+    </p>
+    <button id="yes-search-results">
+      Да
+    </button>
+    <button id="no-search-results">
+      Нет
+    </button>
+  </div>
+  <div id="wrong" style="display: none">
+    <h1>
+      что-то пошло не так
+    </h1>
+    <button id="wrong-button">
+      Очень жаль :(
+    </button>
+  </div>
+  <script src="./client.js"></script>
+</body>
+</html>
