@@ -13,7 +13,8 @@
     donate: 'donate',
     consultant: 'consultant',
     searchResults: 'search-results',
-    wrong: 'wrong'
+    wrong: 'wrong',
+    finish: 'finish'
   };
 
   onClick('start-btn', function () {
@@ -74,13 +75,31 @@
 
   onClick('donate-btn', function () {
     hideScreen(screens.donate);
-    showScreen(screens.consultant);
-  });
-
-  onClick('close-consultant-btn', function () {
-    hideScreen(screens.consultant);
     showScreen(screens.searchResults);
   });
+
+  onClick('yes-search-results', chooseResults);
+  onClick('no-search-results', chooseResults);
+
+  function chooseResults() {
+    hideScreen(screens.searchResults);
+    showScreen(screens.wrong);
+  }
+
+  onClick('wrong-button', function () {
+    hideScreen(screens.wrong);
+    showScreen(screens.finish);
+  });
+
+  for (var i = 1; i <= 10; i++) {
+    onClick('recommend-' + i, function () {
+      var recommendEl = document.querySelector('.recommend');
+
+      if (recommendEl) {
+        recommendEl.style.display = 'none';
+      }
+    });
+  }
 
   function onClick(id, cb) {
     var el = document.getElementById(id);

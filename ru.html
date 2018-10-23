@@ -15,8 +15,15 @@
     <button id="start-btn" class="btn">
       Начать
     </button>
+    <div style="position: absolute; bottom: 50px; left: 0; right: 0; font-size: 120%; text-align: center; line-height: 1.5em;">
+      Оригинальная идея из телеграм-канала <a href="https://t.me/uxlive/6571">uxlive</a>.
+      <br />
+      Автор – <a href="https://blog.bloomca.me/about">Сева Зайков</a>
+      <br />
+    </div>
   </div>
   <div id="notification" style="display: none">
+    <img class="loader" src="./spinner.gif" />
     <div class="notification">
       <p class="notification-text">
         Хотите получать уведомления?
@@ -32,6 +39,7 @@
     </div>
   </div>
   <div id="start-page" style="display: none;">
+    <img class="loader" src="./spinner.gif" />
     <div class="notification" style="right: 100px; left: auto;">
         <p class="notification-text">
           Сделать стартовой страницей?
@@ -47,6 +55,7 @@
     </div>
   </div>
   <div id="cookies" style="display: none;">
+    <img class="loader" src="./spinner.gif" />
     <div class="cookies">
       <h2>
         Ваша конфиденциальность
@@ -85,43 +94,47 @@
       </button>
     </div>
   </div>
-  <div id="restrict-age" style="display: none">
+  <div id="restrict-age" class="container" style="display: none">
     <h1>Вы не можете посещать этот сайт</h1>
     <p>
       В соответствии с законодательством РФ и Гаагской конвенцией, мы не можем показывать содержимое этого сайта пользователям, не достигшим 18 лет.
     </p>
   </div>
   <div id="default-city" style="display: none;">
-      <div class="choice-container">
-          <div class="choice">
-            <h2>
-              Ваш город Москва?
-            </h2>
-            <div>
-              <button id="yes-default-city-btn" class="choice-btn">
-                да
-              </button>
-              <button id="no-default-city-btn" class="choice-btn">
-                нет
-              </button>
-            </div>
-          </div>
+    <div class="choice-container">
+      <div class="choice">
+        <h2>
+          Ваш город Москва?
+        </h2>
+        <div>
+          <button id="yes-default-city-btn" class="choice-btn">
+            да
+          </button>
+          <button id="no-default-city-btn" class="choice-btn">
+            нет
+          </button>
         </div>
+      </div>
+    </div>
   </div>
   <div id="subscribe" style="display: none;">
-    <div id="close-subscribe-btn">x</div>
-    <h3>
-      Подпишитесь на нашу рассылку
-    </h3>
-    <p>
-      Хотите первым получать свежие новости? Мы будем рассылать вам интересные предложения каждую неделю, без ненужного спама, и никогда не отдадим ваш электронный адрес в третьи руки.
-    </p>
-    <input placeholder="ваша электронная почта" />
-    <button id="yes-subscribe-btn">
-      Подписаться
-    </button>
+    <div class="subscription-container">
+      <div class="subscription">
+        <div id="close-subscribe-btn" class="subscription-close"><span style="position: relative; top: -1px;">x</span></div>
+        <h1>
+          Подпишитесь на нашу рассылку
+        </h1>
+        <p>
+          Хотите первым получать свежие новости? Мы будем рассылать вам интересные предложения каждую неделю, без ненужного спама, и никогда не отдадим ваш электронный адрес в третьи руки.
+        </p>
+        <input placeholder="ваша электронная почта" />
+        <button id="yes-subscribe-btn">
+          Подписаться
+        </button>
+      </div>
+    </div>
   </div>
-  <div id="adblock" style="display: none;">
+  <div id="adblock" class="container" style="display: none;">
     <h2>
       Пожалуйста, отключите блокировщик рекламы
     </h2>
@@ -131,11 +144,12 @@
     <p>
       Мы тоже не любим рекламу, но наша миссия – дать услугу самому большому числу пользователей, поэтому мы всегда будем бесплатны. К сожалению, без рекламы это невозможно.
     </p>
-    <button id="adblock-btn">
+    <button id="adblock-btn" class="btn">
       Хорошо
     </button>
   </div>
-  <div id="donate" style="display: none;">
+  <div id="donate" class="container" style="display: none;">
+    <h1>Поддержите нас</h1>
     <p>
       Наш сайт финансово независим – никто не влияет на то, что и как мы делаем. Никто не указывает нам, как именно мы должны работать. Мы не распространяем то, что выгодно людям, стоящим за нами – потому что там никого нет. Однако, в отличие от многих, мы не вводим платную подписку, потому что нам важно, чтобы всё было в открытом доступе. К сожалению, доходы от рекламы падают, и чтобы иметь возможность продолжать нашу работу, нам нужно всё больше поддержки от наших пользователей. Жертвуя нам, вы не только помогаете этому сервису, но и ряду других, а также свободному интернету как таковому. Спасибо, что помогаете нам.
     </p>
@@ -155,26 +169,58 @@
     </div>
   </div>
   <div id="search-results" style="display: none;">
-    <h2>
-      Нашли, что искали?
-    </h2>
-    <p>
-      Мы пытаемся помочь всем, и собираем статистику, насколько полезным оказался наш сайт. Пожалуйста, ответьте нам, чтобы мы могли улучшить наш сервис в дальнейшем. Спасибо!
-    </p>
-    <button id="yes-search-results">
-      Да
-    </button>
-    <button id="no-search-results">
-      Нет
-    </button>
+    <div class="choice-container">
+      <div class="choice">
+        <h2>
+          Нашли, что искали?
+        </h2>
+        <div>
+          <button id="yes-search-results" class="choice-btn">
+            да
+          </button>
+          <button id="no-search-results" class="choice-btn">
+            нет
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
   <div id="wrong" style="display: none">
     <h1>
-      что-то пошло не так
+      Что-то пошло не так
     </h1>
-    <button id="wrong-button">
+    <p style="text-align: center">
+      Наша бравая команда уже знает о проблеме и вовсю чинит эту досадную оплошность.
+    </p>
+    <button class="btn" id="wrong-button">
       Очень жаль :(
     </button>
+    <div class="recommend">
+      <h3>
+        Оцените вероятность, с которой вы посоветуете наш продукт своим друзьям, коллегам, близким
+      </h3>
+      <div class="recommend-circles">
+        <div class="recommend-circle" id="recommend-1">1</div>
+        <div class="recommend-circle" id="recommend-2">2</div>
+        <div class="recommend-circle" id="recommend-3">3</div>
+        <div class="recommend-circle" id="recommend-4">4</div>
+        <div class="recommend-circle" id="recommend-5">5</div>
+        <div class="recommend-circle" id="recommend-6">6</div>
+        <div class="recommend-circle" id="recommend-7">7</div>
+        <div class="recommend-circle" id="recommend-8">8</div>
+        <div class="recommend-circle" id="recommend-9">9</div>
+        <div class="recommend-circle" id="recommend-10">10</div>
+      </div>
+    </div>
+  </div>
+  <div id="finish" class="container" style="display: none;">
+    <h1>
+      Вы выдержали!
+    </h1>
+    <p>
+      Конечно, не всё так плохо, и полно хороших, быстрых, отзывчивых сайтов, которые не перегружены лишней информацией и неработающими виджетами.
+      Возможно, кто-то задумается о том, почему так и что мы можем сделать, чтобы улучшить веб.
+    </p>
   </div>
   <script src="./client.js"></script>
 </body>

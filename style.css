@@ -10,6 +10,23 @@ h1 {
   margin-right: auto;
 }
 
+a {
+  color: #bbb;
+}
+
+.loader {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 100px auto;
+}
+
+.container {
+  max-width: 800px;
+  font-size: 125%;
+  margin: 0 auto;
+}
+
 .btn {
   background-color: #7FDBFF;
   border-radius: 30px;
@@ -68,6 +85,7 @@ h1 {
   border-radius: 15px;
   padding: 20px 30px;
   display: inline-block;
+  min-width: 400px;
 }
 
 .choice-btn {
@@ -75,4 +93,60 @@ h1 {
   padding: 10px 25px;
   font-size: 110%;
   cursor: pointer;
+}
+
+.subscription-container {
+  text-align: center;
+}
+
+.subscription {
+  display: inline-block;
+  background: #0074D9;
+  padding: 25px;
+  border-radius: 20px;
+  position: relative;
+  max-width: 800px;
+}
+
+.subscription-close {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #000;
+  color: #000;
+  border-radius: 100%;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.recommend {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  color: #111;
+  padding: 25px;
+}
+
+.recommend-circles {
+  display: flex;
+  justify-content: center;
+}
+
+.recommend-circle {
+  border: 1px solid #111;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
 }
