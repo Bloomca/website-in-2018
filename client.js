@@ -3,11 +3,9 @@
   var screens = {
     start: 'start-app',
     notification: 'notification',
-    makeStartPage: 'start-page',
     cookies: 'cookies',
     ageVerification: 'age-verification',
     restrictAge: 'restrict-age',
-    defaultCity: 'default-city',
     subscribe: 'subscribe',
     adblock: 'adblock',
     donate: 'donate',
@@ -27,13 +25,6 @@
 
   function chooseNotifications() {
     hideScreen(screens.notification);
-    showScreen(screens.makeStartPage);
-  }
-
-  onClick('no-start-page-btn', chooseStartPage)
-
-  function chooseStartPage() {
-    hideScreen(screens.makeStartPage);
     showScreen(screens.cookies);
   }
 
@@ -49,16 +40,8 @@
 
   onClick('yes-age-verification-btn', function () {
     hideScreen(screens.ageVerification);
-    showScreen(screens.defaultCity);
-  });
-
-  onClick('yes-default-city-btn', chooseDefaultCity);
-  onClick('no-default-city-btn', chooseDefaultCity);
-
-  function chooseDefaultCity() {
-    hideScreen(screens.defaultCity);
     showScreen(screens.subscribe);
-  }
+  });
 
   onClick('close-subscribe-btn', chooseSubscription);
   onClick('yes-subscribe-btn', chooseSubscription);
