@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css" />
+  <title>Websites in 2018</title>
+</head>
+<body>
+  <div id="start-app">
+    <h1>
+      Websites in 2018
+    </h1>
+    <button id="start-btn" class="btn">
+      Start
+    </button>
+    <div style="position: absolute; bottom: 50px; left: 0; right: 0; font-size: 120%; text-align: center; line-height: 1.5em;">
+      Original idea from telegram channel <a href="https://t.me/uxlive/6571" target="_blank">uxlive</a>.
+      <br />
+      Author – <a href="https://blog.bloomca.me/about" target="_blank">Seva Zaikov</a>
+      <br />
+    </div>
+  </div>
+  <div id="notification" style="display: none">
+    <img class="loader" src="./spinner.gif" />
+    <div class="notification">
+      <p class="notification-text">
+        Do you want to receive notifications?
+      </p>
+      <div class="notification-choices">
+        <button id="no-notifications-btn">
+          no
+        </button>
+        <button id="yes-notifications-btn">
+          yes
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="cookies" style="display: none;">
+    <img class="loader" src="./spinner.gif" />
+    <div class="cookies">
+      <h2>
+        Your Privacy
+      </h2>
+      <p>
+        We use cookies on our website to improve your experience and show more relevant advertisements.
+      </p>
+      <p>
+        If you want to learn more, please take a look at our <a href="#">Terms and Conditions</a> and <a href="#a">Cookies Policy</a>.
+      </p>
+      <button id="cookies-btn" class="btn">
+        Accept
+      </button>
+    </div>
+  </div>
+  <div id="age-verification" style="display: none;">
+    <div class="choice-container">
+      <div class="choice">
+          <h2>
+            Are you 18 or more years old?
+          </h2>
+          <div>
+            <button id="yes-age-verification-btn" class="choice-btn">
+              yes
+            </button>
+            <button id="no-age-verification-btn" class="choice-btn">
+              no
+            </button>
+          </div>
+        </div>
+    </div>
+    <div style="display: none">
+      <input placeholder="день" />
+      <input placeholder="месяц" />
+      <input placeholder="год" />
+      <button>
+        Send
+      </button>
+    </div>
+  </div>
+  <div id="restrict-age" class="container" style="display: none">
+    <h1>You Can't Visit This Website</h1>
+    <p>
+      According to the California Law §28, Hague Convention and Maritime Law, we can't show the content of this website to people who have not reached 18 years age.
+    </p>
+  </div>
+  <div id="subscribe" style="display: none;">
+    <div class="subscription-container">
+      <div class="subscription">
+        <div id="close-subscribe-btn" class="subscription-close"><span style="position: relative; top: -1px;">x</span></div>
+        <h1>
+          Subscribe to Our Newsletter
+        </h1>
+        <p>
+          Do you want to receive our news and best offers first? We will send you interesting info every week, without spam, and will never sell or give your email address to someone else.
+        </p>
+        <input placeholder="your email" />
+        <button id="yes-subscribe-btn">
+          Subscribe
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="adblock" class="container" style="display: none;">
+    <h2>
+      Please Disable Your Adblock
+    </h2>
+    <p>
+      Advertisement is our main revenue source. We always try to do our best so that you can use our website for free, and it would be wonderful, if you whitelist our site from your adblock.
+    </p>
+    <p>
+      We also don't like ads, but our mission is to provide this service to the biggest amount of people possible, and it is possible only when we are free. Unfortunately, it is impossible without advertisements.
+    </p>
+    <button id="adblock-btn" class="btn">
+      Got it
+    </button>
+  </div>
+  <div id="donate" class="container" style="display: none;">
+    <h1>Donate</h1>
+    <p>
+      Our website is financially independent – nobody influences us on what and how we are working. We don't spread words of our investors or owners, because there is nobody behind us. And unlike many others, we haven’t put up a paywall as it is extremely important for us to keep everything free and accessible to everyone.
+    </p>
+    <p>
+      Unfortunately, revenue from advertising is falling, so we increasingly need contributions from our users to continue on what we are doing. By donating to us, not only you help this service, but others as well, and the whole open web at all. Thanks for being with us.
+    </p>
+    <button id="donate-btn" class="btn">
+      Got it
+    </button>
+  </div>
+  <div id="consultant" style="display: none;">
+    Ирина, консультант
+    <div>
+      Здравствуйте, чем могу помочь?
+      <div id="close-consultant-btn">x</div>
+      <input />
+      <button id="send-consultant-btn">
+        Отправить
+      </button>
+    </div>
+  </div>
+  <div id="search-results" style="display: none;">
+    <div class="choice-container">
+      <div class="choice">
+        <h2>
+          Did you find what you were looking for?
+        </h2>
+        <div>
+          <button id="yes-search-results" class="choice-btn">
+            yes
+          </button>
+          <button id="no-search-results" class="choice-btn">
+            no
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="wrong" style="display: none">
+    <h1>
+      Something Went Wrong
+    </h1>
+    <p style="text-align: center">
+      Our wonderful team already knows about the problem and is working hard on it. We apologize for any inconvenience!
+    </p>
+    <button class="btn" id="wrong-button">
+      Sad story :(
+    </button>
+    <div class="recommend">
+      <h3>
+        How likely will you recommend our product to your friends, colleagues and relatives?
+      </h3>
+      <div class="recommend-circles">
+        <div class="recommend-circle" id="recommend-1">1</div>
+        <div class="recommend-circle" id="recommend-2">2</div>
+        <div class="recommend-circle" id="recommend-3">3</div>
+        <div class="recommend-circle" id="recommend-4">4</div>
+        <div class="recommend-circle" id="recommend-5">5</div>
+        <div class="recommend-circle" id="recommend-6">6</div>
+        <div class="recommend-circle" id="recommend-7">7</div>
+        <div class="recommend-circle" id="recommend-8">8</div>
+        <div class="recommend-circle" id="recommend-9">9</div>
+        <div class="recommend-circle" id="recommend-10">10</div>
+      </div>
+    </div>
+  </div>
+  <div id="finish" class="container" style="display: none;">
+    <h1>
+      You made it!
+    </h1>
+    <p>
+      Of course, it is not that bad, and there are plently of good, fast and responsive websites, which are not bloated with unnecessary information and poorly working widgets.
+    </p>
+    <p>
+      Maybe somebody will think why is it so and what can we do to avoid it in the future to improve web experience.
+    </p>
+    <div style="position: absolute; bottom: 50px; left: 0; right: 0; font-size: 120%; text-align: center; line-height: 1.5em;">
+        Original idea from telegram channel <a href="https://t.me/uxlive/6571" target="_blank">uxlive</a>.
+        <br />
+        Author – <a href="https://blog.bloomca.me/about" target="_blank">Seva Zaikov</a>
+        <br />
+      </div>
+  </div>
+  <script src="./client.js"></script>
+</body>
+</html>
