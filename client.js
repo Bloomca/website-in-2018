@@ -7,7 +7,7 @@
     ageVerification: 'age-verification',
     restrictAge: 'restrict-age',
     subscribe: 'subscribe',
-    adblock: 'adblock',
+    adblock: 'block-material',
     donate: 'donate',
     consultant: 'consultant',
     searchResults: 'search-results',
@@ -51,7 +51,7 @@
     showScreen(screens.adblock);
   }
 
-  onClick('adblock-btn', function () {
+  onClick('block-material-btn', function () {
     hideScreen(screens.adblock);
     showScreen(screens.donate);
   });
