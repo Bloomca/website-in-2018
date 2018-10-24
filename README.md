@@ -4,6 +4,15 @@ Years of web development, customer research, A/B tests allowed us to understand 
 
 Combine all of that and you will see what a typical website in 2018 looks like.
 
+## Localizations
+
+Right now, it is available in 2 locales:
+
+- [en](https://2018.bloomca.me/en) (default one)
+- [ru](https://2018.bloomca.me/ru)
+
+If you want to add another locale, look at [contributions section](#contributions).
+
 ## Contributions
 
 In case you want to contribute to existing language, just open a PR (or an issue). In case you want to localize it to your language, just copy english version (or whichever you understand the best) and change content, and leave all ids the same, and it should work the same way.
