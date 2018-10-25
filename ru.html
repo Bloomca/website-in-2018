@@ -14,6 +14,13 @@
   <meta name="twitter:title" content="Веб в 2018">
   <meta name="twitter:description" content="Типичный сайт в 2018 году">
   <meta name="twitter:image" content="http://www.gravatar.com/avatar/1533eeac2fdcad45300a1963d5704118?s=200">
+  <script>
+    // Hijack back-button
+    history.pushState(null, document.title, location.href);
+    window.addEventListener('popstate', function () {
+      history.pushState(null, document.title, location.href);
+    });
+  </script>
 </head>
 <body>
   <div id="start-app">
