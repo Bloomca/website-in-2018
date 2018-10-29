@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic|PT+Sans+Caption:700,400|Source+Sans+Pro:400|Raleway:300" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="./style.css" />
   <title>Сайты в 2018</title>
   <meta name="author" content="Seva Zaikov">
@@ -17,7 +18,7 @@
 </head>
 <body>
   <div id="start-app">
-    <h1>
+    <h1 class="start-title">
       Сайты в 2018 году
     </h1>
     <button id="start-btn" class="btn">
@@ -30,51 +31,40 @@
       <br />
     </div>
   </div>
+  <div id="loader" class="loader-container" style="display: none">
+    <div class="loader-wrapper"><img class="loader" src="./spinner.gif" /></div>
+  </div>
   <div id="notification" style="display: none">
-    <img class="loader" src="./spinner.gif" />
     <div class="notification">
       <p class="notification-text">
-        Хотите получать уведомления?
+        2018.websites запрашивает
+      </p>
+      <p style="position: relative; left: 5px; margin-top: 10px; font-size: 90%;margin-bottom: 15px;">
+        <img src="./notifications.png" class="notification-icon" />
+        Показывать уведомления
       </p>
       <div class="notification-choices">
         <button id="no-notifications-btn">
-          нет
+          Блокировать
         </button>
         <button id="yes-notifications-btn">
-          да
+          Разрешить
         </button>
       </div>
     </div>
   </div>
-  <div id="start-page" style="display: none;">
-    <img class="loader" src="./spinner.gif" />
-    <div class="notification" style="right: 100px; left: auto;">
-        <p class="notification-text">
-          Сделать стартовой страницей?
-        </p>
-        <div class="notification-choices">
-          <button id="no-start-page-btn">
-            нет
-          </button>
-          <button id="yes-start-page-btn">
-            да
-          </button>
-        </div>
-    </div>
-  </div>
   <div id="cookies" style="display: none;">
-    <img class="loader" src="./spinner.gif" />
     <div class="cookies">
-      <h2>
+      <h1 class="cookies-title">
         Ваша конфиденциальность
-      </h2>
-      <p>
-        Мы используем куки для того, чтобы предоставить лучший сервис на нашем сайте и показа более релевантных сообщений рекламного характера.
+      </h1>
+      <p class="cookies-text">
+        Наш сайт использует cookie-файлы для того, чтобы отличить вас от других пользователей нашего ресурса. Это позволяет обеспечить удобный просмотр нашего сайта, более релевантную рекламу, а также даёт нам возможность улучшить наш сервис. Для того, чтобы продолжить работу с нашим сайтом, вам необходимо принять использование cookie-файлов.
       </p>
-      <p>
+      <p class="cookies-text">
         Если вы хотите узнать больше, пожалуйста, ознакомьтесь с нашей <a href="#">политикой конфиденциальности</a> и <a href="#">условиями использования cookies</a>.
       </p>
-      <button id="cookies-btn" class="btn">
+      <button id="cookies-btn" class="btn cookies-btn">
         Принять
       </button>
     </div>
@@ -87,10 +77,10 @@
           </h2>
           <div>
             <button id="yes-age-verification-btn" class="choice-btn">
-              да
+              Да
             </button>
             <button id="no-age-verification-btn" class="choice-btn">
-              нет
+              Нет
             </button>
           </div>
         </div>
@@ -109,19 +99,26 @@
     <p>
       В соответствии с законодательством РФ и Гаагской конвенцией, мы не можем показывать содержимое этого сайта пользователям, не достигшим 18 лет.
     </p>
+    <div style="position: absolute; bottom: 50px; left: 0; right: 0; text-align: center; line-height: 1.5em;">
+      Оригинальная идея из телеграм-канала <a href="https://t.me/uxlive/6571">uxlive</a>.
+      <br />
+      Автор – <a href="https://blog.bloomca.me/about">Сева Зайков</a> (<a href="https://github.com/Bloomca/website-in-2018" target="_blank">исходный код</a>)
+      <br />
+    </div>
   </div>
   <div id="subscribe" style="display: none;">
     <div class="subscription-container">
       <div class="subscription">
-        <div id="close-subscribe-btn" class="subscription-close"><span style="position: relative; top: -1px;">x</span></div>
+        <img id="close-subscribe-btn" class="subscription-close" src="./cancel.png" />
+        <img class="subscription-icon" src="./message.png" />
         <h1>
           Подпишитесь на нашу рассылку
         </h1>
-        <p>
+        <p class="subscription-text">
           Хотите первым получать свежие новости? Мы будем рассылать вам интересные предложения каждую неделю, без ненужного спама, и никогда не отдадим ваш электронный адрес в третьи руки.
         </p>
-        <input placeholder="ваша электронная почта" />
-        <button id="yes-subscribe-btn">
+        <input class="subscription-input" placeholder="Ваша электронная почта" />
+        <button class="btn" id="yes-subscribe-btn" style="display: inline-block;">
           Подписаться
         </button>
       </div>
@@ -134,7 +131,7 @@
     <p>
       Реклама – наш главный источник доходов. Мы всегда стараемся сделать самое лучшее, чтобы вы могли бесплатно пользоваться нашим сервисом, поэтому было бы замечательно, если вы внесёте наш сайт в список исключений для вашего блокировщика рекламы.
     </p>
-    <p>
+    <p style="margin-bottom: 60px;">
       Мы тоже не любим рекламу, но наша миссия – дать услугу самому большому числу пользователей, поэтому мы всегда будем бесплатны. К сожалению, без рекламы это невозможно.
     </p>
     <button id="block-material-btn" class="btn">
@@ -146,7 +143,7 @@
     <p>
       Наш сайт финансово независим – никто не влияет на то, что и как мы делаем. Никто не указывает нам, как именно мы должны работать. Мы не распространяем то, что выгодно людям, стоящим за нами – потому что там никого нет. Однако, в отличие от многих, мы не вводим платную подписку, потому что нам важно, чтобы всё было в открытом доступе.
     </p>
-    <p>
+    <p style="margin-bottom: 60px;">
       К сожалению, доходы от рекламы падают, и чтобы иметь возможность продолжать нашу работу, нам нужно всё больше поддержки от наших пользователей. Жертвуя нам, вы не только помогаете этому сервису, но и ряду других, а также свободному интернету как таковому. Спасибо, что помогаете нам.
     </p>
     <button id="donate-btn" class="btn">
@@ -172,10 +169,10 @@
         </h2>
         <div>
           <button id="yes-search-results" class="choice-btn">
-            да
+            Да
           </button>
           <button id="no-search-results" class="choice-btn">
-            нет
+            Нет
           </button>
         </div>
       </div>
@@ -185,7 +182,7 @@
     <h1>
       Что-то пошло не так
     </h1>
-    <p style="text-align: center">
+    <p style="text-align: center; margin: 50px 0; font-size: 18px;">
       Наша бравая команда уже знает о проблеме и вовсю чинит эту досадную оплошность.
     </p>
     <button class="btn" id="wrong-button">
@@ -219,7 +216,7 @@
     <p>
       Возможно, кто-то задумается о том, почему так и что мы можем сделать, чтобы улучшить веб.
     </p>
-    <div style="position: absolute; bottom: 50px; left: 0; right: 0; font-size: 120%; text-align: center; line-height: 1.5em;">
+    <div style="position: absolute; bottom: 50px; left: 0; right: 0; text-align: center; line-height: 1.5em;">
       Оригинальная идея из телеграм-канала <a href="https://t.me/uxlive/6571">uxlive</a>.
       <br />
       Автор – <a href="https://blog.bloomca.me/about">Сева Зайков</a> (<a href="https://github.com/Bloomca/website-in-2018" target="_blank">исходный код</a>)
