@@ -2,6 +2,11 @@ body {
   background-color: #001f3f;
   color: #fff;
   padding-top: 100px;
+  font-family: 'Lora', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'PT Sans Caption', sans;
 }
 
 h1 {
@@ -14,28 +19,55 @@ a {
   color: #bbb;
 }
 
+.start-title {
+  margin-top: 75px;
+  margin-bottom: 50px;
+}
+
+.loader-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .loader {
   display: block;
   width: 80px;
   height: 80px;
-  margin: 100px auto;
 }
 
 .container {
   max-width: 800px;
   font-size: 125%;
   margin: 0 auto;
+  text-align: center;
 }
 
 .btn {
-  background-color: #7FDBFF;
-  border-radius: 30px;
-  padding: 10px 20px;
+  background-color: #cdeaf5;
+  border-radius: 5px;
+  padding: 10px 50px;
   text-align: center;
   cursor: pointer;
   font-size: 115%;
   display: block;
   margin: 0 auto;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #e4f2f7;
 }
 
 .notification {
@@ -85,27 +117,47 @@ a {
   left: 0;
   right: 0;
   color: #fff;
-  padding: 15px 20px;
-  font-size: 125%;
+  padding: 25px 50px;
 }
+
+.cookies-title {
+  text-align: left;
+}
+
+.cookies-text {
+  font-size: 18px;
+  max-width: 1200px;
+}
+
+.cookies-btn {
+  margin: 30px 0;
+}
+
 
 .choice-container {
   text-align: center;
+  position: relative;
+  top: 0px;
+  opacity: 0;
+  transition: top 0.3s, opacity 0.3s;
 }
 
 .choice {
-  background-color: #0074D9;
+  background-color: #2c4967;
+  box-shadow: 3px 3px 10px 0 rgba(113, 116, 197, 0.25);
   border-radius: 15px;
-  padding: 20px 30px;
+  padding: 20px 30px 35px;
   display: inline-block;
   min-width: 400px;
 }
 
 .choice-btn {
   border-radius: 5px;
-  padding: 10px 25px;
+  padding: 10px 30px;
   font-size: 110%;
   cursor: pointer;
+  display: inline-block;
+  margin: 0 2px;
 }
 
 .subscription-container {
@@ -114,26 +166,47 @@ a {
 
 .subscription {
   display: inline-block;
-  background: #0074D9;
-  padding: 25px;
+  background: #2c4967;
+  box-shadow: 3px 3px 10px 0 rgba(113, 116, 197, 0.25);
+  padding: 25px 25px 50px;
   border-radius: 20px;
   position: relative;
   max-width: 800px;
+  top: 0px;
+  opacity: 1;
+  transition: top 0.3s, opacity 0.3s;
 }
 
 .subscription-close {
   position: absolute;
-  right: 20px;
+  right: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 25px;
-  height: 25px;
-  border: 1px solid #000;
-  color: #000;
-  border-radius: 100%;
+  width: 14px;
+  height: 14px;
   cursor: pointer;
-  font-size: 20px;
+}
+
+.subscription-icon {
+  width: 200px;
+  display: block;
+  margin: 30px auto;
+}
+
+.subscription-text {
+  padding: 10px 50px 20px;
+  font-size: 18px;
+}
+
+.subscription-input {
+  border: 1px solid #cdeaf5;
+  border-radius: 5px;
+  font-size: 110%;
+  padding: 10px;
+  min-width: 220px;
+  display: inline-block;
+  margin-right: 5px;
 }
 
 .recommend {
@@ -153,10 +226,10 @@ a {
 }
 
 .recommend-circle {
-  border: 1px solid #111;
+  border: 1px solid #666;
   border-radius: 100%;
-  width: 30px;
-  height: 30px;
+  width: 38px;
+  height: 38px;
   cursor: pointer;
   display: flex;
   align-items: center;

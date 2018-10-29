@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="canonical" href="https://2018.bloomca.me/">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic|PT+Sans+Caption:700,400|Source+Sans+Pro:400|Raleway:300" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" href="./style.css" />
   <title>Websites in 2018</title>
   <meta name="author" content="Seva Zaikov">
@@ -18,7 +19,7 @@
 </head>
 <body>
   <div id="start-app">
-    <h1>
+    <h1 class="start-title">
       Websites in 2018
     </h1>
     <button id="start-btn" class="btn">
@@ -31,8 +32,10 @@
       <br />
     </div>
   </div>
+  <div id="loader" class="loader-container" style="display: none">
+    <div class="loader-wrapper"><img class="loader" src="./spinner.gif" /></div>
+  </div>
   <div id="notification" style="display: none">
-    <img class="loader" src="./spinner.gif" />
     <div class="notification">
       <p class="notification-text">
         2018.websites wants to
@@ -52,18 +55,17 @@
     </div>
   </div>
   <div id="cookies" style="display: none;">
-    <img class="loader" src="./spinner.gif" />
     <div class="cookies">
-      <h2>
+      <h1 class="cookies-title">
         We Respect Your Privacy
-      </h2>
-      <p>
-        We use cookies on our website to improve your experience and show more relevant advertisements.
+      </h1>
+      <p class="cookies-text">
+        We use cookie-files to distinguish you from other users. It allows us to provide you a better exprience, and gives opportunities to improve it even more. In order to continue using our service, you have to accept our usage of cookie-files.
       </p>
-      <p>
+      <p class="cookies-text">
         If you want to learn more, please take a look at our <a href="#">Terms and Conditions</a> and <a href="#a">Cookies Policy</a>.
       </p>
-      <button id="cookies-btn" class="btn">
+      <button id="cookies-btn" class="btn cookies-btn">
         Accept
       </button>
     </div>
@@ -76,10 +78,10 @@
           </h2>
           <div>
             <button id="yes-age-verification-btn" class="choice-btn">
-              yes
+              Yes
             </button>
             <button id="no-age-verification-btn" class="choice-btn">
-              no
+              No
             </button>
           </div>
         </div>
@@ -98,32 +100,39 @@
     <p>
       According to the California Law §28, Hague Convention and Maritime Law, we can't show the content of this website to people who have not reached 18 years age.
     </p>
+    <div style="position: absolute; bottom: 50px; left: 0; right: 0; text-align: center; line-height: 1.5em;">
+        Original idea from telegram channel <a href="https://t.me/uxlive/6571" target="_blank">uxlive</a>.
+        <br />
+        Author – <a href="https://blog.bloomca.me/about" target="_blank">Seva Zaikov</a> (<a href="https://github.com/Bloomca/website-in-2018" target="_blank">source code</a>)
+        <br />
+      </div>
   </div>
   <div id="subscribe" style="display: none;">
     <div class="subscription-container">
       <div class="subscription">
-        <div id="close-subscribe-btn" class="subscription-close"><span style="position: relative; top: -1px;">x</span></div>
+        <img id="close-subscribe-btn" class="subscription-close" src="./cancel.png" />
+        <img class="subscription-icon" src="./message.png" />
         <h1>
           Subscribe to Our Newsletter
         </h1>
-        <p>
+        <p class="subscription-text">
           Do you want to receive our news and best offers first? We will send you interesting info every week, without spam, and will never sell or give your email address to someone else.
         </p>
-        <input placeholder="your email" />
-        <button id="yes-subscribe-btn">
+        <input class="subscription-input" placeholder="Your email" />
+        <button class="btn" id="yes-subscribe-btn" style="display: inline-block;">
           Subscribe
         </button>
       </div>
     </div>
   </div>
   <div id="block-material" class="container" style="display: none;">
-    <h2>
+    <h1>
       Please Disable Your Adblock
     </h2>
     <p>
       Advertisement is our main revenue source. We always try to do our best so that you can use our website for free, and it would be wonderful, if you whitelist our site from your adblock.
     </p>
-    <p>
+    <p style="margin-bottom: 60px;">
       We also don't like ads, but our mission is to provide this service to the biggest amount of people possible, and it is possible only when we are free. Unfortunately, it is impossible without advertisements.
     </p>
     <button id="block-material-btn" class="btn">
@@ -135,7 +144,7 @@
     <p>
       Our website is financially independent – nobody influences us on what and how we are working. We don't spread words of our investors or owners, because there is nobody behind us. And unlike many others, we haven’t put up a paywall as it is extremely important for us to keep everything free and accessible to everyone.
     </p>
-    <p>
+    <p style="margin-bottom: 60px;">
       Unfortunately, revenue from advertising is falling, so we increasingly need contributions from our users to continue on what we are doing. By donating to us, not only you help this service, but others as well, and the whole open web at all. Thanks for being with us.
     </p>
     <button id="donate-btn" class="btn">
@@ -161,10 +170,10 @@
         </h2>
         <div>
           <button id="yes-search-results" class="choice-btn">
-            yes
+            Yes
           </button>
           <button id="no-search-results" class="choice-btn">
-            no
+            No
           </button>
         </div>
       </div>
@@ -174,7 +183,7 @@
     <h1>
       Something Went Wrong
     </h1>
-    <p style="text-align: center">
+    <p style="text-align: center; margin: 50px 0;">
       Our wonderful team already knows about the problem and is working hard on it. We apologize for any inconvenience!
     </p>
     <button class="btn" id="wrong-button">
@@ -208,7 +217,7 @@
     <p>
       Maybe somebody will think why is it so and what can we do to avoid it in the future to improve web experience.
     </p>
-    <div style="position: absolute; bottom: 50px; left: 0; right: 0; font-size: 120%; text-align: center; line-height: 1.5em;">
+    <div style="position: absolute; bottom: 50px; left: 0; right: 0; text-align: center; line-height: 1.5em;">
         Original idea from telegram channel <a href="https://t.me/uxlive/6571" target="_blank">uxlive</a>.
         <br />
         Author – <a href="https://blog.bloomca.me/about" target="_blank">Seva Zaikov</a> (<a href="https://github.com/Bloomca/website-in-2018" target="_blank">source code</a>)

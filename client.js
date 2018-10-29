@@ -12,12 +12,17 @@
     consultant: 'consultant',
     searchResults: 'search-results',
     wrong: 'wrong',
-    finish: 'finish'
+    finish: 'finish',
+    loader: 'loader'
   };
 
   onClick('start-btn', function () {
     hideScreen(screens.start);
-    showScreen(screens.notification);
+    showScreen(screens.loader);
+
+    setTimeout(function () {
+      showScreen(screens.notification);
+    }, 300);
   });
 
   onClick('no-notifications-btn', chooseNotifications);
@@ -25,12 +30,22 @@
 
   function chooseNotifications() {
     hideScreen(screens.notification);
-    showScreen(screens.cookies);
+
+    setTimeout(function () {
+      showScreen(screens.cookies);
+    }, 300);
   }
 
   onClick('cookies-btn', function () {
     hideScreen(screens.cookies);
+    hideScreen(screens.loader);
     showScreen(screens.ageVerification);
+
+    setTimeout(function () {
+      var container = document.getElementById(screens.ageVerification).querySelector('.choice-container');
+      container.style.top = '100px';
+      container.style.opacity = 1;
+    }, 50);
   });
 
   onClick('no-age-verification-btn', function () {
@@ -39,16 +54,28 @@
   });
 
   onClick('yes-age-verification-btn', function () {
-    hideScreen(screens.ageVerification);
-    showScreen(screens.subscribe);
+    var container = document.getElementById(screens.ageVerification).querySelector('.choice-container');
+    container.style.top = '200px';
+    container.style.opacity = 0;
+
+    setTimeout(function () {
+      hideScreen(screens.ageVerification);
+      showScreen(screens.subscribe);
+    }, 300);
   });
 
   onClick('close-subscribe-btn', chooseSubscription);
   onClick('yes-subscribe-btn', chooseSubscription);
 
   function chooseSubscription() {
-    hideScreen(screens.subscribe);
-    showScreen(screens.adblock);
+    var container = document.getElementById(screens.subscribe).querySelector('.subscription');
+    container.style.top = '100px';
+    container.style.opacity = 0;
+
+    setTimeout(function () {
+      hideScreen(screens.subscribe);
+      showScreen(screens.adblock);
+    }, 300);
   }
 
   onClick('block-material-btn', function () {
@@ -59,14 +86,26 @@
   onClick('donate-btn', function () {
     hideScreen(screens.donate);
     showScreen(screens.searchResults);
+
+    setTimeout(function () {
+      var container = document.getElementById(screens.searchResults).querySelector('.choice-container');
+      container.style.top = '100px';
+      container.style.opacity = 1;
+    }, 50);
   });
 
   onClick('yes-search-results', chooseResults);
   onClick('no-search-results', chooseResults);
 
   function chooseResults() {
-    hideScreen(screens.searchResults);
-    showScreen(screens.wrong);
+    var container = document.getElementById(screens.searchResults).querySelector('.choice-container');
+    container.style.top = '200px';
+    container.style.opacity = 0;
+
+    setTimeout(function () {
+      hideScreen(screens.searchResults);
+      showScreen(screens.wrong);
+    }, 300);
   }
 
   onClick('wrong-button', function () {
