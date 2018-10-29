@@ -40,28 +40,41 @@ a {
 
 .notification {
   position: absolute;
-  top: 0;
+  top: 3px;
   left: 100px;
-  background: #DDDDDD;
-  color: #111111;
-  font-size: 125%;
+  border-radius: 5px;
+  background: #fff;
+  color: #555;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0, 1);
+  padding: 15px;
+  width: 295px;
+}
+
+.notification-icon {
+  width: 14px;
+  height: 14px;
+  opacity: 0.6;
+  position: relative;
+  top: 3px;
+  margin-right: 5px;
 }
 
 .notification-text {
-  padding: 10px 15px;
+  padding: 0 0 0 5px;
   margin: 0;
 }
 
 .notification-choices {
-  display: flex;
+  text-align: right;
 }
 
 .notification-choices > * {
-  flex: 0 0 50%;
-  border-left: 1px solid #000;
-  padding: 5px 10px;
-  border-radius: 0;
-  margin: 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  color: #666;
+  border-radius: 5px;
+  padding: 8px 16px;
+  margin: 0 2px;
   cursor: pointer;
 }
 
