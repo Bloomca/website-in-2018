@@ -2,6 +2,8 @@
 (function () {
   var screens = {
     start: 'start-app',
+    mobileStart: 'start-mobile-app',
+    mobileApplication: 'mobile-application',
     notification: 'notification',
     cookies: 'cookies',
     ageVerification: 'age-verification',
@@ -23,6 +25,16 @@
     setTimeout(function () {
       showScreen(screens.notification);
     }, 300);
+  });
+
+  onClick('start-mobile-btn', function () {
+    hideScreen(screens.mobileStart);
+    showScreen(screens.mobileApplication);
+  });
+
+  onClick('mobile-application-btn', function () {
+    hideScreen(screens.mobileApplication);
+    showScreen(screens.notification);
   });
 
   onClick('no-notifications-btn', chooseNotifications);
