@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic|PT+Sans+Caption:700,400|Source+Sans+Pro:400|Raleway:300" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <title>Les sites en 2018</title>
+  <meta name="author" content="Seva Zaikov">
+  <meta name="description" content="Exemple des sites chargés en 2018">
+  <meta name="keywords" content="modern bloated website, websites in 2018, seva zaikov, bloomca">
+  <meta property="og:title" content="Les sites en 2018" />
+  <meta property="og:description" content="Exemple des sites chargés en 2018" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://2018.bloomca.me/en" />
+  <meta property="og:image" content="https://2018.bloomca.me/twitter_summary_en.jpg" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@blooomca">
+  <meta name="twitter:creator" content="@blooomca">
+  <meta name="twitter:title" content="Les sites en 2018">
+  <meta name="twitter:description" content="Exemple des sites chargés en 2018">
+  <meta name="twitter:image" content="https://2018.bloomca.me/twitter_summary_en.jpg">
+</head>
+<body>
+  <div id="start-mobile-app">
+    <h1 class="start-title">
+      Les sites pour mobile en 2018
+    </h1>
+    <button id="start-mobile-btn" class="btn">
+      Commencer
+    </button>
+    <div class="footer">
+      Une idée originale du channel telegram <a href="https://t.me/uxlive/6571" target="_blank">uxlive</a>.
+      <br />
+      Auteur – <a href="https://blog.bloomca.me/about" target="_blank">Seva Zaikov</a> (<a href="https://github.com/Bloomca/website-in-2018" target="_blank">code source</a>)
+      <br />
+    </div>
+  </div>
+  <div id="start-app">
+    <h1 class="start-title">
+      Les sites en 2018
+    </h1>
+    <button id="start-btn" class="btn">
+      Commencer
+    </button>
+    <div class="footer" style="font-size: 120%;">
+      Une idée originale du channel telegram <a href="https://t.me/uxlive/6571" target="_blank">uxlive</a>.
+      <br />
+      Auteur – <a href="https://blog.bloomca.me/about" target="_blank">Seva Zaikov</a> (<a href="https://github.com/Bloomca/website-in-2018" target="_blank">code source</a>)
+      <br />
+    </div>
+  </div>
+  <div id="mobile-application" style="display: none;">
+    <h1>
+      Nous avons une application mobile :
+    </h1>
+    <div style="text-align: center;">
+      <img src="./apple_store.svg" class="mobile-badge" />
+      <img src="./google_play.png" class="mobile-badge" style="position: relative; top: 9px;" />
+    </div>
+
+    <div id="mobile-application-btn">
+      Continuer avec la version web
+    </div>
+  </div>
+  <div id="loader" class="loader-container" style="display: none">
+    <div class="loader-wrapper"><img class="loader" src="./spinner.gif" /></div>
+  </div>
+  <div id="notification" style="display: none">
+    <div class="notification">
+      <p class="notification-text">
+        2018.websites souhaite :
+      </p>
+      <p style="position: relative; left: 5px; margin-top: 10px; font-size: 90%;margin-bottom: 15px;">
+        <img src="./notifications.png" class="notification-icon" />
+        Afficher les notifications
+      </p>
+      <div class="notification-choices">
+        <button id="no-notifications-btn">
+          Bloquer
+        </button>
+        <button id="yes-notifications-btn">
+          Autoriser
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="cookies" style="display: none;">
+    <div class="cookies">
+      <h1 class="cookies-title">
+        Nous respectons votre vie privée
+      </h1>
+      <p class="cookies-text">
+        Nous utilisons des cookies pour vous distinguer des autres utilisateurs. Ils nous permettent de vous fournir une meilleure expérience et vous offre le moyen pour l'améliorer encore plus. Afin de continuer à utiliser notre service, vous devez acceptez l'utilisation de ces cookies.
+      </p>
+      <p class="cookies-text">
+        Pour en savoir plus, veuillez lire nos <a href="#">Termes et Conditions</a> et notre <a href="#a">Politique des Cookies</a>.
+      </p>
+      <button id="cookies-btn" class="btn cookies-btn">
+        Accepter
+      </button>
+    </div>
+  </div>
+  <div id="age-verification" style="display: none;">
+    <div class="choice-container">
+      <div class="choice">
+          <h2>
+            Avez-vous 18 ans ou plus?
+          </h2>
+          <div>
+            <button id="yes-age-verification-btn" class="choice-btn">
+              Oui
+            </button>
+            <button id="no-age-verification-btn" class="choice-btn">
+              Non
+            </button>
+          </div>
+        </div>
+    </div>
+    <div style="display: none">
+      <input placeholder="Jour" />
+      <input placeholder="Mois" />
+      <input placeholder="Année" />
+      <button>
+        Envoyer
+      </button>
+    </div>
+  </div>
+  <div id="restrict-age" class="container" style="display: none">
+    <h1>Vous ne pouvez pas accéder à ce site</h1>
+    <p>
+      Conformément à la loi 49-956 du 16 juillet 1949 §14, nous ne pouvons pas afficher le contenu de ce site aux personnes n'ayant pas encore 18 ans.
+    </p>
+    <div class="footer">
+        Une idée originale du channel telegram <a href="https://t.me/uxlive/6571" target="_blank">uxlive</a>.
+        <br />
+        Auteur – <a href="https://blog.bloomca.me/about" target="_blank">Seva Zaikov</a> (<a href="https://github.com/Bloomca/website-in-2018" target="_blank">code source</a>)
+        <br />
+      </div>
+  </div>
+  <div id="subscribe" style="display: none;">
+    <div class="subscription-container">
+      <div class="subscription">
+        <img id="close-subscribe-btn" class="subscription-close" src="./cancel.png" />
+        <img class="subscription-icon" src="./message.png" />
+        <h1>
+          S'abonner à notre Newsletter
+        </h1>
+        <p class="subscription-text">
+          Souhaitez-vous recevoir nos nouveautés et nos meilleures offres en premier ? Nous vous enverrons des infos intéressantes chaque semaine, sans spam, et sans vendre ou donner votre adresse e-mail à quelqu'un d'autre.
+        </p>
+        <input class="subscription-input" placeholder="Votre e-mail" />
+        <button class="btn" id="yes-subscribe-btn" style="display: inline-block;">
+          S'abonner
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="block-material" class="container" style="display: none;">
+    <h1>
+      Veuillez désactiver votre Adblocker
+    </h1>
+    <p>
+      Les publicités sont notre première source de revenus. Nous faisons de notre mieux pour que vous puissiez utiliser notre site gratuitement, and il serait génial que vous whitelistiez notre site de votre Adblocker.
+    </p>
+    <p style="margin-bottom: 60px;">
+      Nous n'aimons pas non plus les publicités, mais notre mission est de fournir ce service au maximum de personnes possible, et ce n'est possible que si nous sommes gratuit. Malheureusement, ce n'est pas possible sans publicités.
+    </p>
+    <button id="block-material-btn" class="btn">
+      J'ai compris
+    </button>
+  </div>
+  <div id="donate" class="container" style="display: none;">
+    <h1>Faire un don</h1>
+    <p>
+      Notre site est financièrement indépendant – personne n'influence sur comment ou sur quoi nous travaillons. Nous ne répandons pas les mots de nos investisseurs ou propriétaires, car il n'y a personne dernière nous. Et contrairement à beaucoup d'autres, nous n'avons pas mis d'abonnement payant obligatoire comme il nous est important de tout garder gratuit et accessible à tous.
+    </p>
+    <p style="margin-bottom: 60px;">
+      Malheureusement, nos revenus de publicités est en chute libre, donc nous avons de plus en plus besoin de contributions de nos utilisateurs sur ce que nous faisons. En nous faisant un don, vous n'aiderez pas seulement le service, mais aussi les autres, ainsi que le web complet. Merci d'être avec nous.
+    </p>
+    <button id="donate-btn" class="btn">
+      J'ai compris
+    </button>
+  </div>
+  <div id="consultant" style="display: none;">
+    Christine, consultante
+    <div>
+      Bonjour, comment puis-je vous aider ?
+      <div id="close-consultant-btn">x</div>
+      <input />
+      <button id="send-consultant-btn">
+        Envoyer
+      </button>
+    </div>
+  </div>
+  <div id="search-results" style="display: none;">
+    <div class="choice-container">
+      <div class="choice">
+        <h2>
+          Avez-vous trouvé ce que vous cherchiez ?
+        </h2>
+        <div>
+          <button id="yes-search-results" class="choice-btn">
+            Oui
+          </button>
+          <button id="no-search-results" class="choice-btn">
+            Non
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="wrong" style="display: none">
+    <h1>
+      Une erreur est survenue
+    </h1>
+    <p style="text-align: center; margin: 50px 0; font-size: 18px;">
+      Notre formidable équipe est déjà au courant du problème et travaille dur dessus. Nous nous excusons pour le désagrément !
+    </p>
+    <button class="btn" id="wrong-button">
+      Triste histoire :(
+    </button>
+    <div class="recommend">
+      <h3>
+        À quel point recommanderiez-vous notre produit à vos amis, collègues ou parents ?
+      </h3>
+      <div class="recommend-circles">
+        <div class="recommend-circle" id="recommend-1">1</div>
+        <div class="recommend-circle" id="recommend-2">2</div>
+        <div class="recommend-circle" id="recommend-3">3</div>
+        <div class="recommend-circle" id="recommend-4">4</div>
+        <div class="recommend-circle" id="recommend-5">5</div>
+        <div class="recommend-circle" id="recommend-6">6</div>
+        <div class="recommend-circle" id="recommend-7">7</div>
+        <div class="recommend-circle" id="recommend-8">8</div>
+        <div class="recommend-circle" id="recommend-9">9</div>
+        <div class="recommend-circle" id="recommend-10">10</div>
+      </div>
+    </div>
+  </div>
+  <div id="finish" class="container" style="display: none;">
+    <h1>
+      C'est fini !
+    </h1>
+    <p>
+      Évidemment, ce n'est pas si horrible, et il y a plein de bons sites, rapides et responsives, qui ne sont pas chargés d'informations inutiles avec des widgets non-fonctionnels.
+    </p>
+    <p>
+      Peut-être que quelqu'un va se demander pourquoi est-ce ainsi et comment éviter ceci dans le futur pour améliorer l'expérience web.
+    </p>
+    <div class="footer">
+        Une idée originale du channel telegram <a href="https://t.me/uxlive/6571" target="_blank">uxlive</a>.
+        <br />
+        Auteur – <a href="https://blog.bloomca.me/about" target="_blank">Seva Zaikov</a> (<a href="https://github.com/Bloomca/website-in-2018" target="_blank">code source</a>)
+        <br />
+      </div>
+  </div>
+  <script src="./client.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127958415-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-127958415-1');
+  </script>
+</body>
+</html>
